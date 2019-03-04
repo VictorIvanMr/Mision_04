@@ -1,0 +1,25 @@
+#Autor: Victor Ivan Morales Ramos; A01377601
+#Lee el número de paquetes comprados y despliega la cantidad a pagarsegún la tabla dada
+
+def totalPagar(c):
+    if c > 0 and c < 10:
+        final = 2300*1
+    elif c>=10 and c<=19:
+        final = 2300*.15
+    elif c>=20 and c<=49:
+        final = 2300*.22
+    elif c>=50 and c<=99:
+        final = 2300*.35
+    elif c>=100:
+        final = 2300*.42
+    else:
+        final = 'error'
+
+    return final
+
+def main():
+    cantidad = int(input("Teclee el numero de paquetes: "))
+    precioFinal = totalPagar(cantidad)
+    print("Usted pagara: ", precioFinal)
+
+main()
