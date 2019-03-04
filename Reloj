@@ -1,0 +1,23 @@
+#Autor: Victor Ivan Morales Ramos; A01377601
+#Convertir la hora dada por el usuario en formato 24hrs a formato 12hrs
+
+def conversionHora(a,b,c):
+    if a < 13 and a>=1 and b<61 and b>=0 and c<61 and c>=0:
+        return ("Hora: %d:%02d:%02d AM" % (a,b,c))
+    if 24< a and a > 12 and b<61 and b>=0 and c<61 and c>=0:
+        a=a-12
+        return ("Hora: %d:%02d:%02d PM" % (a,b,c))
+    if a==0 and b <61 and b>=0 and c<61 and c>=0:
+        a=12
+        return ("Hora: %d:%02d:%02d AM" % (a,b,c))
+    else:
+        return ("error")
+        
+def main():
+    H=int(input("Teclee la hora: "))
+    M=int(input("Teclee los minutos: "))
+    S=int(input("Teclee los segundos: "))
+    Tiempo12 = conversionHora(H, M, S)
+    print(Tiempo12)
+
+main()
