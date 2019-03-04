@@ -1,0 +1,33 @@
+# Victor Ivan Morales Ramos; A01377601
+# Calcular el area de dos rectángulos y comparar cual tiene mayor area o si es igual
+
+def comparaAreas (a1, a2):
+    if a1 > a2:
+        return ("el 1er rectangulo:", a1)
+    else:
+        if a2 > a1:
+            return ("el 2do rectangulo:", a2)
+        else:
+            if a1 == a2:
+                return ("ninguna. El 1er y 2do rectangulo tienen la misma area")
+
+def calcularArea(base, altura):
+    area = base * altura
+    return area
+
+def main():
+
+       base1 = int(input("Escriba la base del 1er rectangulo: "))
+       alto1 = int(input("Escriba la altura del 1er rectangulo: "))
+       base2 = int(input("Escribe la base del 2do rectangulo: "))
+       alto2 = int(input("Escribe la altura del 2do rectangulo: "))
+       area1 = calcularArea(base1, alto1)
+       area2 = calcularArea(base2, alto2)
+       
+       print ("El area del primer rectangulo es:", area1)
+       print("El area del segundo rectangulo es:", area2)
+       mayor_area = comparaAreas(area1, area2)
+       print ("El rectangulo que tuvo una mayor area, fue...",(mayor_area))
+
+
+main()
